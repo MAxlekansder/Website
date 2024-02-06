@@ -1,89 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alexanders Portfolio</title>
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="stylesheet" href="../CSS/mediaqueries.css" />
-    <script src="../Javascript/script.js" defer></script>
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Alexander Hasslund</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#project">Project</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Alexander Hasslund</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#project" onclick="toggleMenu()">Project</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
 
-    <section id="profile">
-      <div class="section_pic-container">
-        <!-- <div class="cutout"></div> -->
-        <img
-          src="../assets/Test2.jpg"
-          alt="Alexander profile picture"
-          class="round-border"
-        />
-        <div class="section_text">
-          <p class="section_text_p1">hello i'm</p>
-          <h1 class="title">Alexander Hasslund</h1>
-          <p class="section_text_p2">Backend developer</p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('../assets/resume-example.pdf')"
-            >
-              My CV
-            </button>
-            <button
-              class="btn btn-color-1"
-              onclick="location.href='./#contact'"
-            >
-              contact
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexanders Portfolio</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/mediaqueries.css" />
+  <script src="../Javascript/script.js" defer></script>
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Alexander Hasslund</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Alexander Hasslund</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#project" onclick="toggleMenu()">Project</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="profile">
+    <div class="section_pic-container">
+      <!-- <div class="cutout"></div> -->
+      <img src="../assets/Test2.jpg" alt="Alexander profile picture" class="round-border" />
+      <div class="section_text">
+        <p class="section_text_p1">hello i'm</p>
+        <h1 class="title">Alexander Hasslund</h1>
+        <p class="section_text_p2">Backend developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('../assets/resume-example.pdf')">
+            My CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            contact
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="../assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/alexander-hasslund-690567293/'" />
+          <img src="../assets/github.png" alt="My Github profile" class="icon"
+            onclick="location.href='https://github.com/MAxlekansder'" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="about">
+    <div class="about-container">
+      <div class="row">
+        <div class="about-col-1">
+          <!-- <img src="../assets/about-me2.jpg" alt="" class="img-container"> -->
+          <img src="../assets/Mountain2.jpg" alt="" class="img-container">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <div class="text-p">
+            As a cheerful and enthusiastic full-stack developer,
+            I'm driven by a passion for learning and a relentless pursuit of knowledge.
+            With a solid foundation in data science and experience in ERP development, particularly in
+            management-oriented roles,
+            I bring a unique blend of technical expertise and strategic thinking to the table. I thrive on challenges
+            and am dedicated to continuously expanding my skills to create innovative solutions that make a positive
+            impact.
           </div>
-          <div id="socials-container">
-            <img
-              src="../assets/linkedin.png"
-              alt="My LinkedIn profile"
-              class="icon"
-              onclick="location.href='https://www.linkedin.com/in/alexander-hasslund-690567293/'"
-            />
-            <img
-              src="../assets/github.png"
-              alt="My Github profile"
-              class="icon"
-              onclick="location.href='https://github.com/MAxlekansder'"
-            />
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>  
+          </div>
+          <div class="tab-contents active-tab" id="skills-content">
+            <ul>
+              <div class="exp-container">
+                <div class="back-titles">
+                  <h3 class="h3-titles">Backend Development</h3>
+                  <li><span>Java</span></li>
+                  <li><span>Spring Boot Framework</span></li>
+                  <li><span>SSMS / SSRS</span></li>
+                  <li><span>MongoDB Compass</span></li>
+                  <li><span>Node.js</span></li>
+                  <li><span>MySQL / MariaDB</span></li>
+                  <li><span>Postman</span></li>
+                </div>
+                <div class="back-titles">
+                  <h3 class="h3-titles">Frontend Development</h3>
+                  <li><span>Typescript</span></li>
+                  <li><span>Javascript</span></li>
+                  <li><span>HTML / CSS</span></li>
+                  <li><span>React</span></li>
+                  <li><span>Next</span></li>
+                </div>
+                <div class="back-titles">
+                  <h3 class="h3-titles">Management Competence</h3>
+                  <li><span>Supply Chain Management</span></li>
+                  <li><span>Microsoft Excel</span></li>
+                  <li><span>Power BI</span></li>
+                  <li><span>Data analysis</span></li>
+                  <li><span>ERP development</span></li>
+                  <li><span>Acceptance testing</span></li>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="tab-contents active" id="experience-content">
+            test
           </div>
         </div>
       </div>
-    </section>
-    <section id="new-page">
-      <!-- Content of the new section goes here -->
-      <h2>New Section</h2>
-      <p>This is the content of the new section.</p>
-    </section>
-  </body>
+    </div>
+  
+  </div>
+  <!-- <section>
+        <h3>My Projects</h3>
+      </section> -->
+
+</body>
+
 </html>
